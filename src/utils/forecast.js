@@ -9,12 +9,12 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback('Unable to find location', undefined);
         } else {
-            callback(undefined, 'Summary: ' + body.daily.data[0].summary
-                + 'Temperature: ' + body.currently.temperature + ' degrees C.'
-                + 'Temperature High: ' + body.daily.data[0].temperatureHigh + ' degrees C.'
-                + 'Temperature Low: ' + body.daily.data[0].temperatureLow + ' degrees C.'
-                + 'Chance of Rain: ' + body.currently.precipProbability + '%'
-                + 'Wind Speed: ' + body.currently.windSpeed + "km/h."
+            callback(undefined, 'Summary: ' + body.daily.data[0].summary + ' '
+                + 'Temperature: ' + body.currently.temperature + ' degrees C. '
+                + 'Temperature High: ' + body.daily.data[0].temperatureHigh + ' degrees C. '
+                + 'Temperature Low: ' + body.daily.data[0].temperatureLow + ' degrees C. '
+                + 'Chance of Rain: ' + body.currently.precipProbability + '%. '
+                + 'Wind Speed: ' + body.currently.windSpeed + "km/h. "
             )
         }
     })
